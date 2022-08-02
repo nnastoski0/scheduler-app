@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1412</width>
-    <height>880</height>
+    <width>1562</width>
+    <height>902</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="mouseTracking">
    <bool>true</bool>
@@ -16,36 +22,89 @@
   <property name="windowTitle">
    <string>Schedule King</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1412</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuScheduler_App">
-    <property name="title">
-     <string>File</string>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QToolButton" name="toolButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
     </property>
-    <addaction name="actionSave"/>
-    <addaction name="actionLoad"/>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string>Home</string>
+    </property>
    </widget>
-   <addaction name="menuScheduler_App"/>
+   <widget class="QToolButton" name="toolButton_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Calendar</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>810</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Settings</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tasks</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>460</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>10</y>
+      <width>1191</width>
+      <height>151</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionSave">
-   <property name="text">
-    <string>Save</string>
-   </property>
-  </action>
-  <action name="actionLoad">
-   <property name="text">
-    <string>Load</string>
-   </property>
-  </action>
  </widget>
  <resources/>
  <connections/>
