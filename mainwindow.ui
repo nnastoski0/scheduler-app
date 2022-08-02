@@ -94,13 +94,23 @@
      <string>Search</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="listWidget">
+   <widget class="QCalendarWidget" name="calendarWidget">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>10</y>
-      <width>1191</width>
-      <height>151</height>
+      <x>160</x>
+      <y>150</y>
+      <width>1101</width>
+      <height>631</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableView" name="UpcomingView">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>60</y>
+      <width>281</width>
+      <height>831</height>
      </rect>
     </property>
    </widget>
