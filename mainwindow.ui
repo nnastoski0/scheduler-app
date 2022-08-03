@@ -136,6 +136,10 @@ font: 16pt &quot;Titillium Web&quot;;</string>
       <height>29</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(62, 115, 104);
+font: 800 italic 9pt &quot;Segoe UI&quot;;</string>
+    </property>
     <property name="text">
      <string>X</string>
     </property>
