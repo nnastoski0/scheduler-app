@@ -22,6 +22,9 @@
   <property name="windowTitle">
    <string>Schedule King</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(109, 108, 108)</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QToolButton" name="toolButton">
     <property name="geometry">
@@ -45,7 +48,7 @@
    <widget class="QToolButton" name="toolButton_3">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>820</y>
       <width>71</width>
       <height>71</height>
@@ -90,6 +93,16 @@
       <height>821</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Look at this tooltip</string>
+    </property>
+    <property name="toolTipDuration">
+     <number>1</number>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(62, 115, 104);
+font: 16pt &quot;Titillium Web&quot;;</string>
+    </property>
    </widget>
    <widget class="QTableView" name="UpcomingView">
     <property name="geometry">
@@ -112,6 +125,19 @@
     </property>
     <property name="text">
      <string>Goals</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closebutton">
+    <property name="geometry">
+     <rect>
+      <x>1480</x>
+      <y>0</y>
+      <width>61</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X</string>
     </property>
    </widget>
   </widget>
