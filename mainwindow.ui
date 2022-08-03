@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1562</width>
-    <height>902</height>
+    <width>1546</width>
+    <height>899</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -42,24 +42,11 @@
      <string>Home</string>
     </property>
    </widget>
-   <widget class="QToolButton" name="toolButton_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>280</y>
-      <width>71</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Calendar</string>
-    </property>
-   </widget>
    <widget class="QToolButton" name="toolButton_3">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>810</y>
+      <x>0</x>
+      <y>820</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -72,7 +59,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>370</y>
+      <y>270</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -85,7 +72,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>460</y>
+      <y>470</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -97,10 +84,10 @@
    <widget class="QCalendarWidget" name="calendarWidget">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>150</y>
-      <width>1101</width>
-      <height>631</height>
+      <x>140</x>
+      <y>60</y>
+      <width>1111</width>
+      <height>821</height>
      </rect>
     </property>
    </widget>
@@ -110,8 +97,21 @@
       <x>1260</x>
       <y>60</y>
       <width>281</width>
-      <height>831</height>
+      <height>821</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Goals</string>
     </property>
    </widget>
   </widget>
