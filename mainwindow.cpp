@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    m_title = new cTitlebar(this);
+    ui->titlebar_layout->addWidget(m_title);
 }
 
 MainWindow::~MainWindow()
@@ -14,7 +16,7 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_closebutton_clicked()
+void MainWindow::on_pushButton_clicked()
 {
     this->close();
 }
