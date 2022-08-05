@@ -153,7 +153,7 @@ background: none;
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_5">
+           <widget class="QPushButton" name="tasksButton">
             <property name="maximumSize">
              <size>
               <width>50</width>
@@ -161,10 +161,21 @@ background: none;
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: white;</string>
+             <string notr="true">QPushButton{
+background-color: none;
+border: none;
+}
+
+QPushButton::hover{
+background-color: rgb(13, 52, 107);
+}
+
+QPushButton::pressed{
+background: none;
+}</string>
             </property>
             <property name="text">
-             <string>PushButton</string>
+             <string>Tasks</string>
             </property>
            </widget>
           </item>
@@ -385,8 +396,8 @@ background: none;
               </property>
              </widget>
             </widget>
-            <widget class="QWidget" name="scheduler_page">
-             <widget class="QLabel" name="label">
+            <widget class="QWidget" name="tasks_page">
+             <widget class="QLabel" name="testImage">
               <property name="geometry">
                <rect>
                 <x>-12</x>

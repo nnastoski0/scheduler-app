@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "CustomTitleBar.h"
+#include "CustomTitleBarWatcher.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,7 +25,7 @@ private slots:
 
     void on_homeButton_clicked();
 
-    void on_pushButton_5_clicked();
+    void on_tasksButton_clicked();
 
 private:
     cTitlebar *m_title;

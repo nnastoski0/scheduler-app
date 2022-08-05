@@ -61,7 +61,7 @@ void MainWindow::on_homeButton_clicked()
 }
 
 
-void MainWindow::on_pushButton_5_clicked()
+void MainWindow::on_tasksButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
 }

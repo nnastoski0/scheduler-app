@@ -1,4 +1,4 @@
-#include "CustomTitleBar.h"
+#include "CustomTitleBarWatcher.h"
 #include "qwidget.h"
 
 cTitlebar::cTitlebar(QWidget *parent ) :m_parent(parent)
