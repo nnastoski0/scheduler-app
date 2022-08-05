@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1524</width>
-    <height>795</height>
+    <width>1600</width>
+    <height>1000</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -88,15 +88,51 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Minimum</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>80</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="homeButton">
             <property name="minimumSize">
              <size>
               <width>50</width>
               <height>50</height>
              </size>
             </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+background-color: none;
+border: none;
+}
+
+QPushButton::hover{
+background-color: rgb(13, 52, 107);
+}
+
+QPushButton::pressed{
+background: none;
+}</string>
+            </property>
             <property name="text">
-             <string>PushButton</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -105,16 +141,28 @@
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Preferred</enum>
+            </property>
             <property name="sizeHint" stdset="0">
              <size>
               <width>20</width>
-              <height>40</height>
+              <height>700</height>
              </size>
             </property>
            </spacer>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_5">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: white;</string>
+            </property>
             <property name="text">
              <string>PushButton</string>
             </property>
@@ -160,7 +208,7 @@
            <layout class="QVBoxLayout" name="titlebar_layout"/>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="minimizeButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -206,7 +254,7 @@ background: none;
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="maximizeButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -228,7 +276,6 @@ background: none;
             <property name="styleSheet">
              <string notr="true">QPushButton{
 background-color: rgb(9, 34, 71);
-color: white;
 border: none;
 }
 
@@ -241,7 +288,13 @@ background: none;
 }</string>
             </property>
             <property name="text">
-             <string>R</string>
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
             </property>
             <property name="flat">
              <bool>false</bool>
@@ -249,7 +302,7 @@ background: none;
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="exitButton">
             <property name="minimumSize">
              <size>
               <width>50</width>
@@ -289,11 +342,17 @@ background: none;
         </widget>
        </item>
        <item row="1" column="1" colspan="2">
-        <widget class="QFrame" name="frame">
+        <widget class="QFrame" name="content_frame">
          <property name="minimumSize">
           <size>
-           <width>1400</width>
+           <width>1550</width>
            <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
           </size>
          </property>
          <property name="frameShape">
@@ -302,12 +361,22 @@ background: none;
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <layout class="QGridLayout" name="gridLayout_3"/>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <property name="topMargin">
+           <number>3</number>
+          </property>
+          <property name="rightMargin">
+           <number>3</number>
+          </property>
+          <property name="spacing">
+           <number>3</number>
+          </property>
+         </layout>
         </widget>
        </item>
       </layout>
       <zorder>menubar_frame</zorder>
-      <zorder>frame</zorder>
+      <zorder>content_frame</zorder>
       <zorder>titlebar_frame</zorder>
      </widget>
     </item>

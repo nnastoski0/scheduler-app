@@ -1,7 +1,5 @@
 #include "CustomTitleBar.h"
-#include "qboxlayout.h"
 #include "qwidget.h"
-#include "qpushbutton.h"
 
 cTitlebar::cTitlebar(QWidget *parent ) :m_parent(parent)
 {
@@ -21,6 +19,7 @@ void cTitlebar::mouseMoveEvent(QMouseEvent *event)
 {
     if(event->buttons() & Qt::LeftButton)
     {
+        m_parent->showNormal();
         m_parent->move(event->globalPosition().toPoint() - m_pCursor);
         event->accept();
     }
