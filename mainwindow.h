@@ -18,7 +18,10 @@ public:
 
 private slots:
 
-    void on_pushButton_clicked();
+    void on_exitButton_clicked();
+    void on_maximizeButton_clicked();
+
+    void on_minimizeButton_clicked();
 
 private:
     cTitlebar *m_title;
