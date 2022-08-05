@@ -54,3 +54,15 @@ void MainWindow::on_minimizeButton_clicked()
     this->showMinimized();
 }
 
+// stacked widget page switch handler
+void MainWindow::on_homeButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+

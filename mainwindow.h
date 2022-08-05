@@ -23,6 +23,10 @@ private slots:
 
     void on_minimizeButton_clicked();
 
+    void on_homeButton_clicked();
+
+    void on_pushButton_5_clicked();
+
 private:
     cTitlebar *m_title;
     Ui::MainWindow *ui;
