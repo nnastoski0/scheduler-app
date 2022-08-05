@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     m_title = new cTitlebar(this);
-    ui->titlebar_layout->addWidget(m_title);
+    ui->titlebar_layout->addWidget(m_title); //add the custom title bar to the layout widget
 }
 
 MainWindow::~MainWindow()
