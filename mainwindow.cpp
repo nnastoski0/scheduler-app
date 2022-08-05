@@ -21,3 +21,13 @@ void MainWindow::on_pushButton_clicked()
     this->close();
 }
 
+void MainWindow::on_homeButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_schedulerButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+

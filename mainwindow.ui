@@ -88,7 +88,7 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="homeButton">
             <property name="minimumSize">
              <size>
               <width>50</width>
@@ -96,7 +96,7 @@
              </size>
             </property>
             <property name="text">
-             <string>PushButton</string>
+             <string>Home</string>
             </property>
            </widget>
           </item>
@@ -114,9 +114,12 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_5">
+           <widget class="QPushButton" name="schedulerButton">
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
+            </property>
             <property name="text">
-             <string>PushButton</string>
+             <string>Scheduling</string>
             </property>
            </widget>
           </item>
@@ -302,7 +305,52 @@ background: none;
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <layout class="QGridLayout" name="gridLayout_3"/>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QStackedWidget" name="stackedWidget">
+            <widget class="QWidget" name="calendar_page">
+             <widget class="QCalendarWidget" name="calendarWidget">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>1371</width>
+                <height>731</height>
+               </rect>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="scheduler_page">
+             <widget class="QLabel" name="label">
+              <property name="geometry">
+               <rect>
+                <x>-10</x>
+                <y>-10</y>
+                <width>721</width>
+                <height>711</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/img/bwjcm8ct75y31.jpg&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_2">
+              <property name="geometry">
+               <rect>
+                <x>710</x>
+                <y>20</y>
+                <width>671</width>
+                <height>621</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gif/theTHING.gif&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
