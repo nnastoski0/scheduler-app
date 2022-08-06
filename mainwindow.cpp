@@ -12,11 +12,11 @@ MainWindow::MainWindow(QWidget *parent)
     m_title = new cTitlebar(this);
     ui->titlebar_layout->addWidget(m_title);
 
-
-
     //adds icons to buttons
     ui->homeButton->setIcon(QIcon(":/Resources/Icons/home.png"));
 
+    // instantiate tasks controller
+    c_tasks = new Tasks();
 
     //Adds icon to resize button
     ui->maximizeButton->setCheckable(true);
@@ -64,5 +64,25 @@ void MainWindow::on_homeButton_clicked()
 void MainWindow::on_tasksButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
+}
+
+
+
+void MainWindow::on_addTaskButton_clicked()
+{
+    // grab pointer for layout
+    QWidget * tasks_page = ui->stackedWidget->currentWidget();
+
+    // grab pointer for LineEdit widget in tasks page
+    QLineEdit * text_input = tasks_page->findChild<QLineEdit *>("inputText");
+
+    c_tasks->addTask(text_input->text());
+
+    // grab pointer for Label
+    QLabel * text_label = tasks_page->findChild<QLabel *>("tasksText");
+
+    text_label->setText(c_tasks->getTasks());
+
+    text_input->clear();
 }
 

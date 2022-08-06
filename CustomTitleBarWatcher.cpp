@@ -24,3 +24,4 @@ void cTitlebar::mouseMoveEvent(QMouseEvent *event)
         event->accept();
     }
 }
+
