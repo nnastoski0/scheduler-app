@@ -12,6 +12,7 @@ ScreenMoveWatcher::~ScreenMoveWatcher(){
 }
 
 bool ScreenMoveWatcher::eventFilter(QObject *watched, QEvent *event){
+
     QPushButton *button = qobject_cast<QPushButton*>(watched);
 
     if(!button){
@@ -19,7 +20,7 @@ bool ScreenMoveWatcher::eventFilter(QObject *watched, QEvent *event){
     }
 
     if(event->type() == QEvent::Move){
-        //the screen has been moved
+        //the screen has been moved, therefore we reset the icon to the default
         button->setIcon(QIcon(":/Resources/Icons/expand-arrows.svg"));
         return true;
     }
