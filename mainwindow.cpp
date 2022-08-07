@@ -1,6 +1,8 @@
 #include "mainwindow.h"
+#include "screenmovewatcher.h"
 #include "ui_mainwindow.h"
 #include <QRect>
+#include "screenmovewatcher.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -8,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //creates the custom title bar and adds it to a layout along the top of the screen
+    //creates the custom title bar move handler and adds it to a layout along the top of the screen
     m_title = new cTitlebar(this);
     ui->titlebar_layout->addWidget(m_title);
 
@@ -19,8 +21,10 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     //Adds icon to resize button
+    ScreenMoveWatcher *maxButWatcher = new ScreenMoveWatcher(this);
     ui->maximizeButton->setCheckable(true);
     ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/resize.png"));
+    ui->maximizeButton->installEventFilter(maxButWatcher);
 }
 
 MainWindow::~MainWindow()

@@ -6,6 +6,10 @@ cTitlebar::cTitlebar(QWidget *parent ) :m_parent(parent)
 
 }
 
+cTitlebar::~cTitlebar(){
+
+}
+
 void cTitlebar::mousePressEvent(QMouseEvent *event)
 {
     if(event->button() == Qt::LeftButton)
@@ -24,3 +28,4 @@ void cTitlebar::mouseMoveEvent(QMouseEvent *event)
         event->accept();
     }
 }
+
