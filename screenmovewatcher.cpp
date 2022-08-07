@@ -20,7 +20,7 @@ bool ScreenMoveWatcher::eventFilter(QObject *watched, QEvent *event){
 
     if(event->type() == QEvent::Move){
         //the screen has been moved
-        button->setIcon(QIcon(":/Resources/Icons/resize.png"));
+        button->setIcon(QIcon(":/Resources/Icons/expand-arrows.svg"));
         return true;
     }
 

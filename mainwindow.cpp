@@ -18,12 +18,14 @@ MainWindow::MainWindow(QWidget *parent)
 
     //adds icons to buttons
     ui->homeButton->setIcon(QIcon(":/Resources/Icons/home.png"));
+    ui->exitButton->setIcon(QIcon(":/Resources/Icons/multiply.svg"));
+    ui->minimizeButton->setIcon(QIcon(":/Resources/Icons/minus.svg"));
 
 
     //Adds icon to resize button
     ScreenMoveWatcher *maxButWatcher = new ScreenMoveWatcher(this);
     ui->maximizeButton->setCheckable(true);
-    ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/resize.png"));
+    ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/expand-arrows.svg"));
     ui->maximizeButton->installEventFilter(maxButWatcher);
 }
 
@@ -43,11 +45,11 @@ void MainWindow::on_maximizeButton_clicked()
 {
     if(this->isFullScreen()){
         this->showNormal();
-        ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/resize.png"));
+        ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/expand-arrows.svg"));
     }
     else{
         this->showFullScreen();
-        ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/compress.png"));
+        ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/compress-arrows.svg"));
     }
 
 }
