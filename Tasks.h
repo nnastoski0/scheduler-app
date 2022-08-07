@@ -1,8 +1,12 @@
 #ifndef TASKS_H
 #define TASKS_H
 
-#include <vector>
+#include <QLineEdit>
 #include <QString>
+#include <QWidget>
+#include <QLabel>
+#include <vector>
+
 
 struct Task {
     QString title;
@@ -19,13 +23,15 @@ struct Task {
 class Tasks
 {
 public:
-    Tasks();
-    void addTask(QString task_title);
-    void addTask(QString task_title, QString task_desc);
-    QString getTasks();
+    Tasks(QWidget * tasks_page_);
+    void addTask();
+    void displayTasks();
 
 private:
     std::vector<Task> tasks;
+    QWidget * tasks_page;
+    QLineEdit * textInputWidget;
+    QLabel * textLabelWidget;
 };
 
 #endif // TASKS_H
