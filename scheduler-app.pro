@@ -12,13 +12,10 @@ SOURCES += \
     CustomTitleBarWatcher.cpp \
     Tasks.cpp \
     main.cpp \
-    mainwindow.cpp \
-    screenmovewatcher.cpp
+    mainwindow.cpp
 
 HEADERS += \
     CustomTitleBarWatcher.h \
-    mainwindow.h \
-    screenmovewatcher.h
     Tasks.h \
     mainwindow.h
 

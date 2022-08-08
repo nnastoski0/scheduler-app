@@ -15,9 +15,8 @@ class cTitlebar : public QWidget
 
     public:
         cTitlebar(QWidget *parent);
-        ~cTitlebar();
 
     protected:
-        void mousePressEvent(QMouseEvent *event) override;
-        void mouseMoveEvent(QMouseEvent *event) override;
+        void mousePressEvent(QMouseEvent *event);
+        void mouseMoveEvent(QMouseEvent *event);
 };
