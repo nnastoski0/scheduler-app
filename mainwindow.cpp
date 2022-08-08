@@ -1,6 +1,8 @@
 #include "mainwindow.h"
+#include "screenmovewatcher.h"
 #include "ui_mainwindow.h"
 #include <QRect>
+#include "screenmovewatcher.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -8,19 +10,23 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //creates the custom title bar and adds it to a layout along the top of the screen
+    //creates the custom title bar move handler and adds it to a layout along the top of the screen
     m_title = new cTitlebar(this);
     ui->titlebar_layout->addWidget(m_title);
 
     //adds icons to buttons
     ui->homeButton->setIcon(QIcon(":/Resources/Icons/home.png"));
+    ui->exitButton->setIcon(QIcon(":/Resources/Icons/multiply.svg"));
+    ui->minimizeButton->setIcon(QIcon(":/Resources/Icons/minus.svg"));
 
     // instantiate tasks controller & pass tasks page in
     c_tasks = new Tasks(ui->stackedWidget->widget(1));
 
     //Adds icon to resize button
+    ScreenMoveWatcher *maxButWatcher = new ScreenMoveWatcher(this);
     ui->maximizeButton->setCheckable(true);
-    ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/resize.png"));
+    ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/expand-arrows.svg"));
+    ui->maximizeButton->installEventFilter(maxButWatcher);
 }
 
 MainWindow::~MainWindow()
@@ -39,11 +45,11 @@ void MainWindow::on_maximizeButton_clicked()
 {
     if(this->isFullScreen()){
         this->showNormal();
-        ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/resize.png"));
+        ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/expand-arrows.svg"));
     }
     else{
         this->showFullScreen();
-        ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/compress.png"));
+        ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/compress-arrows.svg"));
     }
 
 }
