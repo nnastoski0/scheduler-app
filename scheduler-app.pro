@@ -20,7 +20,6 @@ HEADERS += \
     mainwindow.h \
     screenmovewatcher.h
     Tasks.h \
-    mainwindow.h
 
 FORMS += \
     mainwindow.ui
