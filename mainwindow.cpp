@@ -14,13 +14,13 @@ MainWindow::MainWindow(QWidget *parent)
     m_title = new cTitlebar(this);
     ui->titlebar_layout->addWidget(m_title);
 
-
-
     //adds icons to buttons
     ui->homeButton->setIcon(QIcon(":/Resources/Icons/home.png"));
     ui->exitButton->setIcon(QIcon(":/Resources/Icons/multiply.svg"));
     ui->minimizeButton->setIcon(QIcon(":/Resources/Icons/minus.svg"));
 
+    // instantiate tasks controller & pass tasks page in
+    c_tasks = new Tasks(ui->stackedWidget->widget(1));
 
     //Adds icon to resize button
     ScreenMoveWatcher *maxButWatcher = new ScreenMoveWatcher(this);
@@ -66,9 +66,17 @@ void MainWindow::on_homeButton_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 
-
 void MainWindow::on_tasksButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
+}
+//
+
+
+// tasks button handler
+void MainWindow::on_addTaskButton_clicked()
+{
+    c_tasks->addTask();
+    c_tasks->displayTasks();
 }
 

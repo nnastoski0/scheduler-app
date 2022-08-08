@@ -31,5 +31,3 @@ void cTitlebar::mouseMoveEvent(QMouseEvent *event)
     }
 }
 
-
-
