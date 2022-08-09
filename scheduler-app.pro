@@ -18,7 +18,7 @@ SOURCES += \
 HEADERS += \
     CustomTitleBarWatcher.h \
     mainwindow.h \
-    screenmovewatcher.h
+    screenmovewatcher.h \
     Tasks.h \
 
 FORMS += \
