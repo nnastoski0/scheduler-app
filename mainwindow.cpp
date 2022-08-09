@@ -19,6 +19,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->exitButton->setIcon(QIcon(":/Resources/Icons/multiply.svg"));
     ui->minimizeButton->setIcon(QIcon(":/Resources/Icons/minus.svg"));
 
+    // ensure calendar page is default on app startup
+    ui->stackedWidget->setCurrentWidget(0); // 0 is first index, calendar page
+
     // instantiate tasks controller & pass tasks page in
     c_tasks = new Tasks(ui->stackedWidget->widget(1));
 
