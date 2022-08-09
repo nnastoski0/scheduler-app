@@ -404,7 +404,7 @@ background: none;
           <item row="0" column="0">
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="calendar_page">
              <layout class="QGridLayout" name="gridLayout_4">
@@ -463,7 +463,7 @@ text-align: center;</string>
                </rect>
               </property>
               <property name="styleSheet">
-               <string notr="true">text-color: white;</string>
+               <string notr="true">color: white;</string>
               </property>
               <property name="text">
                <string>Add Task</string>
