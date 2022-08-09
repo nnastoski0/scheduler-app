@@ -10,12 +10,16 @@ CONFIG += c++17
 
 SOURCES += \
     CustomTitleBarWatcher.cpp \
+    Tasks.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    screenmovewatcher.cpp
 
 HEADERS += \
     CustomTitleBarWatcher.h \
-    mainwindow.h
+    mainwindow.h \
+    screenmovewatcher.h \
+    Tasks.h \
 
 FORMS += \
     mainwindow.ui
