@@ -1,7 +1,5 @@
 <RCC>
     <qresource prefix="/Resources">
-        <file>Icons/compress.png</file>
-        <file>Icons/resize.png</file>
         <file>Images/clarkson_blunt.jpg</file>
         <file>Icons/arrow.svg</file>
         <file>Icons/compress-arrows.svg</file>
