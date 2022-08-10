@@ -15,9 +15,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->titlebar_layout->addWidget(m_title);
 
     //adds icons to buttons
-    ui->homeButton->setIcon(QIcon(":/Resources/Icons/home.png"));
+    ui->homeButton->setIcon(QIcon(":/Resources/Icons/home.svg"));
     ui->exitButton->setIcon(QIcon(":/Resources/Icons/multiply.svg"));
     ui->minimizeButton->setIcon(QIcon(":/Resources/Icons/minus.svg"));
+    ui->tasksButton->setIcon(QIcon(":/Resources/Icons/tasks-clipboard.svg"));
 
     // ensure calendar page is default on app startup
     ui->stackedWidget->setCurrentIndex(0); // 0 is first index, calendar page
@@ -31,6 +32,7 @@ MainWindow::MainWindow(QWidget *parent)
     ScreenMoveWatcher *maxButWatcher = new ScreenMoveWatcher(this);
     ui->maximizeButton->setCheckable(true);
     ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/expand-arrows.svg"));
+    //create an event filter to revert the maximize button Icon when the screen is moved
     ui->maximizeButton->installEventFilter(maxButWatcher);
 
 }
@@ -85,4 +87,6 @@ void MainWindow::on_addTaskButton_clicked()
     c_tasks->addTask();
     c_tasks->displayTasks();
 }
+
+
 

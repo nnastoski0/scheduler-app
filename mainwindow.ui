@@ -180,7 +180,7 @@ background: none;
 }</string>
             </property>
             <property name="text">
-             <string>Tasks</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -424,7 +424,7 @@ background: none;
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>101</width>
+                <width>121</width>
                 <height>51</height>
                </rect>
               </property>

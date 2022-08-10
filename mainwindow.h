@@ -34,5 +34,6 @@ private:
     cTitlebar *m_title;
     Ui::MainWindow *ui;
     Tasks *c_tasks;
+
 };
 #endif // MAINWINDOW_H
