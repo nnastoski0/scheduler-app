@@ -6,6 +6,7 @@
 #include <QWidget>
 #include <QLabel>
 #include <vector>
+#include <QKeyEvent>
 
 
 struct Task {
@@ -20,10 +21,11 @@ struct Task {
     }
 };
 
-class Tasks
-{
+class Tasks : public QWidget{
+       Q_OBJECT
 public:
-    Tasks(QWidget * tasks_page_);
+    Tasks(QWidget *tasks_page_);
+    ~Tasks() {};
     void addTask();
     void displayTasks();
 
@@ -32,6 +34,7 @@ private:
     QWidget * tasks_page;
     QLineEdit * textInputWidget;
     QLabel * textLabelWidget;
+
 };
 
 #endif // TASKS_H

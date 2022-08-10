@@ -20,16 +20,19 @@ MainWindow::MainWindow(QWidget *parent)
     ui->minimizeButton->setIcon(QIcon(":/Resources/Icons/minus.svg"));
 
     // ensure calendar page is default on app startup
-    ui->stackedWidget->setCurrentWidget(0); // 0 is first index, calendar page
+    ui->stackedWidget->setCurrentIndex(0); // 0 is first index, calendar page
 
     // instantiate tasks controller & pass tasks page in
     c_tasks = new Tasks(ui->stackedWidget->widget(1));
+    //connects the return key pressed signal to the add task button clicked signal to add a task when you press the enter key
+    connect(ui->inputText,SIGNAL(returnPressed()),ui->addTaskButton,SIGNAL(clicked()));
 
     //Adds icon to resize button
     ScreenMoveWatcher *maxButWatcher = new ScreenMoveWatcher(this);
     ui->maximizeButton->setCheckable(true);
     ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/expand-arrows.svg"));
     ui->maximizeButton->installEventFilter(maxButWatcher);
+
 }
 
 MainWindow::~MainWindow()
