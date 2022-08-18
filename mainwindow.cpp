@@ -15,21 +15,26 @@ MainWindow::MainWindow(QWidget *parent)
     ui->titlebar_layout->addWidget(m_title);
 
     //adds icons to buttons
-    ui->homeButton->setIcon(QIcon(":/Resources/Icons/home.png"));
+    ui->homeButton->setIcon(QIcon(":/Resources/Icons/home.svg"));
     ui->exitButton->setIcon(QIcon(":/Resources/Icons/multiply.svg"));
     ui->minimizeButton->setIcon(QIcon(":/Resources/Icons/minus.svg"));
+    ui->tasksButton->setIcon(QIcon(":/Resources/Icons/tasks-clipboard.svg"));
 
     // ensure calendar page is default on app startup
-    ui->stackedWidget->setCurrentWidget(0); // 0 is first index, calendar page
+    ui->stackedWidget->setCurrentIndex(0); // 0 is first index, calendar page
 
     // instantiate tasks controller & pass tasks page in
     c_tasks = new Tasks(ui->stackedWidget->widget(1));
+    //connects the return key pressed signal to the add task button clicked signal to add a task when you press the enter key
+    connect(ui->inputText,SIGNAL(returnPressed()),ui->addTaskButton,SIGNAL(clicked()));
 
     //Adds icon to resize button
     ScreenMoveWatcher *maxButWatcher = new ScreenMoveWatcher(this);
     ui->maximizeButton->setCheckable(true);
     ui->maximizeButton->setIcon(QIcon(":/Resources/Icons/expand-arrows.svg"));
+    //create an event filter to revert the maximize button Icon when the screen is moved
     ui->maximizeButton->installEventFilter(maxButWatcher);
+
 }
 
 MainWindow::~MainWindow()
@@ -82,4 +87,6 @@ void MainWindow::on_addTaskButton_clicked()
     c_tasks->addTask();
     c_tasks->displayTasks();
 }
+
+
 

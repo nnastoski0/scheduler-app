@@ -1,13 +1,12 @@
 <RCC>
     <qresource prefix="/Resources">
-        <file>Icons/compress.png</file>
-        <file>Icons/home.png</file>
-        <file>Icons/resize.png</file>
         <file>Images/clarkson_blunt.jpg</file>
         <file>Icons/arrow.svg</file>
         <file>Icons/compress-arrows.svg</file>
         <file>Icons/expand-arrows.svg</file>
         <file>Icons/minus.svg</file>
         <file>Icons/multiply.svg</file>
+        <file>Icons/home.svg</file>
+        <file>Icons/tasks-clipboard.svg</file>
     </qresource>
 </RCC>
