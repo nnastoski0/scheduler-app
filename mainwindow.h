@@ -30,6 +30,8 @@ private slots:
 
     void on_addTaskButton_clicked();
 
+    void on_settingsButton_clicked();
+
 private:
     cTitlebar *m_title;
     Ui::MainWindow *ui;

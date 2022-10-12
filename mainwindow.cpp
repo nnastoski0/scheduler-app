@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->exitButton->setIcon(QIcon(":/Resources/Icons/multiply.svg"));
     ui->minimizeButton->setIcon(QIcon(":/Resources/Icons/minus.svg"));
     ui->tasksButton->setIcon(QIcon(":/Resources/Icons/tasks-clipboard.svg"));
+    // make sure to add icon for settings!
 
     // ensure calendar page is default on app startup
     ui->stackedWidget->setCurrentIndex(0); // 0 is first index, calendar page
@@ -78,6 +79,12 @@ void MainWindow::on_tasksButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
 }
+
+void MainWindow::on_settingsButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
 //
 
 
