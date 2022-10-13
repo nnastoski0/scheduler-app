@@ -185,6 +185,39 @@ background: none;
            </widget>
           </item>
           <item>
+           <widget class="QPushButton" name="settingsButton">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+background-color: none;
+border: none;
+}
+
+QPushButton::hover{
+background-color: rgb(13, 52, 107);
+}
+
+QPushButton::pressed{
+background: none;
+}</string>
+            </property>
+            <property name="text">
+             <string>Settings</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <spacer name="verticalSpacer">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -404,7 +437,7 @@ background: none;
           <item row="0" column="0">
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="calendar_page">
              <layout class="QGridLayout" name="gridLayout_4">
@@ -419,7 +452,7 @@ background: none;
             </widget>
             <widget class="QWidget" name="tasks_page">
              <layout class="QGridLayout" name="gridLayout_5"/>
-             <widget class="QLabel" name="titleText">
+             <widget class="QLabel" name="tasksTitleText">
               <property name="geometry">
                <rect>
                 <x>0</x>
@@ -488,6 +521,26 @@ font-weight: bold;</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="settings_page">
+             <widget class="QLabel" name="settingsTitleText">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>201</width>
+                <height>51</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: white;
+font-size: 30pt;
+text-align: center;</string>
+              </property>
+              <property name="text">
+               <string>Settings</string>
               </property>
              </widget>
             </widget>
